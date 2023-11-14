@@ -1,25 +1,30 @@
 footer{
     padding: 20px 0;
-    border-top: 1px solid #bbbbbb;
+    border-top: 1px solid #DDDDDD;
 }
 .footer_wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 20px;
+    p{
+        font-family: Roboto,'Open Sans', sans-serif;
+        color: #000000;
+    }
 }
 .footer_menu{
     height: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
+    a{
+        font-family: Roboto,'Open Sans', sans-serif;
+        color: #000000;
+        padding: 10px;
+    }
 }
-.footer_menu a{
-    font-family: Roboto,'Open Sans', sans-serif;
-    color: #000000;
-    padding: 5px 10px;
-}
-.footer_wrapper p{
-    font-family: Roboto,'Open Sans', sans-serif;
-    color: #000000;
+@media only screen and (max-width: 700px) {
+    .footer_wrapper{flex-direction: column;}
+    .footer_menu{flex-direction: column;}
 }

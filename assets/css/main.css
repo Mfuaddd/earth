@@ -14,6 +14,7 @@ img {
 header {
   background-image: url(https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Banner.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   overflow: auto;
 }
@@ -27,6 +28,7 @@ nav {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav_right {
@@ -40,18 +42,21 @@ nav {
   align-items: center;
   gap: 20px;
 }
-
 .nav_menu a {
+  display: block;
   font-family: Roboto, "Open Sans", sans-serif;
   color: #000000;
   padding: 10px 20px;
   text-transform: uppercase;
+  transition: 500ms;
+}
+.nav_menu a:hover {
+  color: #2c541d;
 }
 
 .nav_card {
-  font-size: 24px;
-  line-height: 32px;
-  padding: 10px 20px;
+  font-size: 20px;
+  padding: 5px 20px;
 }
 
 .amount {
@@ -67,16 +72,52 @@ nav {
 }
 
 .nav_profile {
-  padding: 10px 20px;
-  line-height: 32px;
+  padding: 5px 20px;
   font-size: 24px;
 }
 
+.nav_bars {
+  display: none;
+  background-color: #000000;
+  padding: 5px 10px;
+  line-height: 27px;
+  font-size: 20px;
+  color: white;
+}
+.nav_bars .fa-bars {
+  display: inline;
+}
+.nav_bars .fa-xmark {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav_bars {
+    display: block;
+  }
+  .nav_profile {
+    display: none;
+  }
+  .nav_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+    gap: 0;
+  }
+  .nav_menu li {
+    background-color: white;
+    border-top: 1px solid #DDDDDD;
+    width: 100%;
+  }
+}
 .header_welcome {
   margin: 200px 0;
   text-align: center;
 }
-
 .header_welcome h1 {
   font-family: "Jost", sans-serif;
   color: #2c541d;
@@ -85,7 +126,6 @@ nav {
   line-height: 1;
   letter-spacing: 10px;
 }
-
 .header_welcome h2 {
   font-family: "Jost", sans-serif;
   color: #050505;
@@ -98,7 +138,6 @@ nav {
 .welcome_btn {
   margin-top: 60px;
 }
-
 .welcome_btn a {
   font-family: Roboto, "Open Sans", sans-serif;
   color: #FFFFFF;
@@ -108,8 +147,97 @@ nav {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
+  transition: 500ms;
+}
+.welcome_btn a:hover {
+  background-color: #2c541d;
 }
 
+.aside_content {
+  overflow: hidden;
+  transition: 500ms;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  background-color: #FFFFFF;
+}
+
+.aside_header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #74a84a;
+  border: 1px solid #DDDDDD;
+}
+.aside_header p {
+  font-family: Roboto, "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.aside_body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside_body span {
+  font-family: Roboto, "Open Sans", sans-serif;
+  color: #585858;
+  font-weight: bold;
+  text-align: center;
+}
+
+.aside_footer {
+  padding: 20px;
+}
+.aside_footer a {
+  font-family: Roboto, "Open Sans", sans-serif;
+  font-weight: 500;
+  display: block;
+  background-color: #74a84a;
+  color: black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.dspBlock {
+  display: block !important;
+}
+
+.dspInline {
+  display: inline !important;
+}
+
+.dspNone {
+  display: none !important;
+}
+
+.aside_scale {
+  width: 400px;
+}
+
+@media only screen and (max-width: 700px) {
+  .header_welcome h1 {
+    font-size: 60px;
+  }
+  .header_welcome h2 {
+    font-size: 30px;
+  }
+  .nav_card {
+    padding: 5px 10px;
+    width: 55px;
+  }
+  .aside_scale {
+    width: 100%;
+  }
+}
 .posters_container {
   max-width: 1200px;
   margin: 80px auto;
@@ -117,7 +245,7 @@ nav {
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -128,11 +256,13 @@ nav {
   min-width: 200px;
   width: 100%;
 }
-
 .posters_box img {
+  cursor: pointer;
   margin-bottom: 15px;
 }
-
+.posters_box img:hover + .addcard {
+  opacity: 0.9;
+}
 .posters_box span {
   font-family: Roboto, "Open Sans", sans-serif;
   display: block;
@@ -141,14 +271,12 @@ nav {
   opacity: 0.6;
   margin-bottom: 10px;
 }
-
 .posters_box h2 {
   font-family: "Jost", sans-serif;
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
 }
-
 .posters_box p {
   font-family: "Jost", sans-serif;
   font-size: 14px;
@@ -173,6 +301,12 @@ nav {
   z-index: 1;
   transition: 500ms;
 }
+.addcard:hover {
+  opacity: 0.9;
+}
+.addcard:hover + .add_card_text {
+  opacity: 0.9;
+}
 
 .add_card_text {
   position: absolute;
@@ -189,39 +323,25 @@ nav {
   transition: 500ms;
 }
 
-.posters_box img:hover + .addcard {
-  opacity: 0.9;
-}
-
-.addcard:hover {
-  opacity: 0.9;
-}
-
-.addcard:hover + .add_card_text {
-  opacity: 0.9;
-}
-
 .customers_container {
   max-width: 1200px;
   margin: 80px auto;
 }
 
 #customers {
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #DDDDDD;
 }
 
 .customers_box {
   min-width: 200px;
   width: 100%;
 }
-
 .customers_box img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin-bottom: 20px;
 }
-
 .customers_box span {
   font-family: Roboto, "Open Sans", sans-serif;
   color: #000000;
@@ -230,14 +350,12 @@ nav {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
 .customers_box i {
   font-size: 32px;
   color: #2c541d;
   margin-bottom: 20px;
 }
-
-.customers_box p {
+.customers_box P {
   font-family: "Jost", sans-serif;
   color: #585858;
   font-size: 20px;
@@ -263,35 +381,39 @@ nav {
 .gift_text {
   margin: 200px 0;
   text-align: center;
+  padding: 20px;
 }
-
 .gift_text h2 {
   font-family: "Jost", sans-serif;
   color: #000000;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 40px;
   letter-spacing: 5px;
   margin-bottom: 20px;
 }
-
 .gift_text p {
   font-family: "Jost", sans-serif;
   color: #585858;
 }
 
 .gift_btn {
+  display: inline-block;
   margin-top: 40px;
+  background-color: #74a84a;
 }
-
 .gift_btn a {
+  display: block;
   font-family: Roboto, "Open Sans", sans-serif;
   color: #FFFFFF;
   font-size: 16px;
-  background-color: #74a84a;
   padding: 15px 40px;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+  transition: 500ms;
+}
+.gift_btn a:hover {
+  background-color: #2c541d;
 }
 
 .widget_container {
@@ -301,13 +423,13 @@ nav {
 
 .widget_box {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
+  padding: 10px;
   width: 100%;
   border-right: 1px solid #eaeaea;
 }
-
 .widget_box:last-child {
   border: none;
 }
@@ -319,7 +441,6 @@ nav {
   letter-spacing: 2px;
   color: #000000;
 }
-
 .widget_box_text p {
   font-family: Roboto, "Open Sans", sans-serif;
   color: #585858;
@@ -337,16 +458,31 @@ nav {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .widget_box {
+    flex-direction: column;
+    text-align: center;
+    border: none;
+  }
+}
 footer {
   padding: 20px 0;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #DDDDDD;
 }
 
 .footer_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: 20px;
+}
+.footer_wrapper p {
+  font-family: Roboto, "Open Sans", sans-serif;
+  color: #000000;
 }
 
 .footer_menu {
@@ -355,14 +491,17 @@ footer {
   align-items: center;
   gap: 10px;
 }
-
 .footer_menu a {
   font-family: Roboto, "Open Sans", sans-serif;
   color: #000000;
-  padding: 5px 10px;
+  padding: 10px;
 }
 
-.footer_wrapper p {
-  font-family: Roboto, "Open Sans", sans-serif;
-  color: #000000;
+@media only screen and (max-width: 700px) {
+  .footer_wrapper {
+    flex-direction: column;
+  }
+  .footer_menu {
+    flex-direction: column;
+  }
 }
