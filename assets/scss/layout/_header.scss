@@ -1,0 +1,87 @@
+header{
+    background-image: url(https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+    
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    padding: 20px;
+    display:  flex;
+    justify-content: space-between;
+
+}
+.nav_right{
+    display: flex;
+    justify-content: center;
+}
+.nav_menu{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav_menu a{
+    font-family: Roboto,'Open Sans', sans-serif;
+    color: #000000;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.nav_card{
+    font-size: 24px;
+    line-height: 32px;
+    padding: 10px 20px;
+}
+.amount{
+    display: inline-block;
+    font-size: 10px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    line-height: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+.nav_profile{
+    padding: 10px 20px;
+    line-height: 32px;
+    font-size: 24px;
+}
+.header_welcome{
+    margin: 200px 0;
+    text-align: center;
+}
+.header_welcome h1{
+    font-family: 'Jost', sans-serif;
+    color: #2c541d;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 10px;
+}
+.header_welcome h2{
+    font-family: 'Jost', sans-serif;
+    color: #050505;
+    font-size: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6.3px;
+}
+.welcome_btn{
+    margin-top: 60px;
+}
+.welcome_btn a{
+    font-family: Roboto,'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: #74a84a;
+    padding: 15px 40px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
