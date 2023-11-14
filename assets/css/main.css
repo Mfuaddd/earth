@@ -183,6 +183,7 @@ nav {
 }
 .aside_header i {
   cursor: pointer;
+  display: block;
   padding: 10px;
 }
 
