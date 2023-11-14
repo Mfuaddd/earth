@@ -178,7 +178,12 @@ nav {
   font-family: Roboto, "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: bold;
+  padding: 10px;
   line-height: 1;
+}
+.aside_header i {
+  cursor: pointer;
+  padding: 10px;
 }
 
 .aside_body {
