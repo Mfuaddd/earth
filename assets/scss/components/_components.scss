@@ -5,10 +5,24 @@
 }
 .wrapper{
     display: grid;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     // align-items: center;
     gap: 20px;
+}
+@media only screen and (max-width: 600px) {
+    .wrapper{grid-template-columns: auto;}
+}
+.dspBlock{
+    display: block !important;
+}
+.dspInline{
+    display: inline !important;
+}
+.dspNone{
+    display: none!important;
 }
 .d-flex{
     display: flex !important;

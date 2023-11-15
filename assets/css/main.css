@@ -19,9 +19,28 @@ img {
 
 .wrapper {
   display: grid;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: auto;
+  }
+}
+.dspBlock {
+  display: block !important;
+}
+
+.dspInline {
+  display: inline !important;
+}
+
+.dspNone {
+  display: none !important;
 }
 
 .d-flex {
@@ -254,18 +273,6 @@ nav {
   text-transform: uppercase;
 }
 
-.dspBlock {
-  display: block !important;
-}
-
-.dspInline {
-  display: inline !important;
-}
-
-.dspNone {
-  display: none !important;
-}
-
 .aside_scale {
   width: 400px;
 }
@@ -292,7 +299,6 @@ nav {
 
 .posters_box {
   position: relative;
-  max-width: 400px;
   min-width: 200px;
   width: 100%;
 }
@@ -498,9 +504,6 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-  .wrapper {
-    flex-direction: column;
-  }
   .widget_box {
     flex-direction: column;
     text-align: center;
@@ -509,7 +512,6 @@ nav {
 }
 .cards_right {
   padding: 20px;
-  border-left: 1px solid #eaeaea;
 }
 .cards_right > span {
   font-family: Roboto, "Open Sans", sans-serif;
@@ -526,6 +528,7 @@ nav {
 .right_filter > p {
   font-family: Roboto, "Open Sans", sans-serif;
   color: #585858;
+  padding: 12px;
 }
 
 .orderby {
@@ -538,12 +541,22 @@ nav {
 
 .cards_left {
   padding: 20px;
+  border-right: 1px solid #eaeaea;
 }
 
+@media only screen and (max-width: 900px) {
+  .cards_left {
+    border: none;
+  }
+  .cards_flex {
+    flex-direction: column-reverse;
+  }
+}
 .search {
   gap: 10px;
 }
 .search > input {
+  flex-grow: 1;
   padding: 12px;
   border: 1px solid #d9d9d9;
   background-color: #fff;
@@ -593,6 +606,7 @@ nav {
   pointer-events: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 .filter_slider .range-input input::-webkit-slider-thumb {
   height: 15px;
@@ -611,7 +625,7 @@ nav {
   -moz-appearance: none;
 }
 .filter_slider .range-price {
-  margin: 30px 0;
+  margin: 40px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -626,6 +640,25 @@ nav {
 }
 .filter_slider .range-price input:first-of-type {
   margin-right: 15px;
+}
+
+.categories h2 {
+  color: #74a84a;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  line-height: 1.3;
+  font-size: 22px;
+}
+
+.categories_list li {
+  padding: 10px;
+}
+.categories_list span:nth-of-type(1) {
+  font-family: Roboto, sans-serif;
+  color: #74a84a;
+  font-size: 18px;
+  padding-left: 15px;
+  font-weight: 500;
 }
 
 footer {

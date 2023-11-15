@@ -1,3 +1,5 @@
+// NAVBAR ##################################################
+
 const navBars = document.querySelector(".nav_bars")
 const navBarsXmarkIcon = document.querySelector(".fa-xmark")
 const navBarsBarsIcon = document.querySelector(".fa-bars")
@@ -18,7 +20,8 @@ asideClose.addEventListener("click",function () {
     asideContent.classList.remove("aside_scale")
 })
 
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+// SLIDER ####################################################
+
 let rangeMin = 1;
 const range = document.querySelector(".range-selected");
 const rangeInput = document.querySelectorAll(".range-input input");
@@ -56,5 +59,69 @@ rangePrice.forEach((input) => {
         range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
       }
     }
+  });
+});
+
+// CATEGORIES #########################################################
+
+const categories = document.querySelectorAll(".categories_list li")
+const postType = document.querySelectorAll(".post_type")
+const headerSpan = document.querySelector(".header_span")
+const headerH2 = document.querySelector(".header_h2")
+
+categories.forEach((el)=>{
+  const span = el.querySelector("span")
+  el.addEventListener("click",function () {
+    headerSpan.textContent = "Home / " + span.textContent
+    headerH2.textContent = span.textContent
+    postType.forEach((x)=>{
+      if(x.textContent === span.textContent){
+        x.parentNode.classList.remove("dspNone")
+      }
+      else{
+        x.parentNode.classList.add("dspNone")
+      }
+    })
+  })
+})
+
+// SEARCH #########################################################
+
+const searchInput = document.querySelector(".search input")
+const searchSubmit = document.querySelector(".search button")
+const postName = document.querySelectorAll(".post_name")
+
+if (searchSubmit) {
+  searchSubmit.addEventListener("click",function () {
+    postName.forEach((el)=>{
+      if (el.textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
+        el.parentNode.classList.remove("dspNone")
+        
+      }
+      else{
+        el.parentNode.classList.add("dspNone")
+      }
+    })
+  })
+}
+
+
+// SLIDER #########################################################
+
+const postPrice = document.querySelectorAll(".post_price")
+rangeInput.forEach((input) => {
+  console.log("c");
+  input.addEventListener("change", (e) => {
+    postPrice.forEach((el)=>{
+      console.log(+el.textContent.slice(1), +rangePrice[1].value);
+      if (+el.textContent.slice(1) > +rangePrice[0].value &&
+       +el.textContent.slice(1) < +rangePrice[1].value ) {
+        el.parentNode.classList.remove("dspNone")
+      }
+      else{
+        el.parentNode.classList.add("dspNone")
+        
+      }
+    })
   });
 });

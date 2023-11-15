@@ -60,7 +60,7 @@
 
     <main>
         <section id="cards">
-            <div class="container d-flex jc-between mt-40">
+            <div class="cards_flex container d-flex jc-center mt-40">
                 <aside class="cards_left">
                     <div class="search d-flex mb-40">
                         <input type="text" placeholder="Search products...">
@@ -81,11 +81,18 @@
                             </div>
                           </div>  
                     </div>
+                    <div class="categories">
+                        <h2 class="mb-15">Categories</h2>
+                        <ul class="categories_list">
+                            <li class="category_postcards"><span>Postcards</span><span>(6)</span></li>
+                            <li class="category_posters"><span>Posters</span><span> (6)</span></li>
+                        </ul>
+                    </div>
                 </aside>
 
                 <div class="cards_right">
-                    <span class="mb-15">Home / Posters</span>
-                    <h2 class="mb-40">Shop</h2>
+                    <span class="mb-15 header_span">Home / Shop</span>
+                    <h2 class="mb-40 header_h2" >Shop</h2>
                     <div class="right_filter d-flex jc-between mt-15 mb-40">
                         <p>Showing all 12 results</p>
                         <select name="orderby" class="orderby">
@@ -100,37 +107,71 @@
                     <div class="wrapper">
                         <div class="posters_box">
                             <img class="posters_box_img"
-                                src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg"
+                                src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard1-1000x1000.jpg"
                                 alt="">
                             <div class="addcard">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V1</h2>
-                            <p>$23.99</p>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V1</h2>
+                            <p class="post_price">$23.99</p>
                         </div>
                         <div class="posters_box">
-                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV2-min-1000x1000.jpg"
                                 alt="">
                             <div class="addcard">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V2</h2>
-                            <p>$17.99</p>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V2</h2>
+                            <p class="post_price">$17.99</p>
                         </div>
                         <div class="posters_box">
-                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard3-1000x1000.jpg"
                                 alt="">
                             <div class="addcard">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V3</h2>
-                            <p>$14.99</p>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V3</h2>
+                            <p class="post_price">$14.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img class="posters_box_img"
+                                src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Postcard-6-min-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V4</h2>
+                            <p class="post_price">$23.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV5-min-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V5</h2>
+                            <p class="post_price">$17.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2021/08/PostcardV6-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Postcards</span>
+                            <h2 class="post_name">Postcard V6</h2>
+                            <p class="post_price">$14.99</p>
                         </div>
                         <div class="posters_box">
                             <img class="posters_box_img"
@@ -140,9 +181,9 @@
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V1</h2>
-                            <p>$23.99</p>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V1</h2>
+                            <p class="post_price">$23.99</p>
                         </div>
                         <div class="posters_box">
                             <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg"
@@ -151,9 +192,9 @@
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V2</h2>
-                            <p>$17.99</p>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V2</h2>
+                            <p class="post_price">$17.99</p>
                         </div>
                         <div class="posters_box">
                             <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg"
@@ -162,15 +203,66 @@
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <div class="add_card_text">Add To Card</div>
-                            <span>Posters</span>
-                            <h2>Poster V3</h2>
-                            <p>$14.99</p>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V3</h2>
+                            <p class="post_price">$14.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img class="posters_box_img"
+                                src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster2-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V4</h2>
+                            <p class="post_price">$23.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster3-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V5</h2>
+                            <p class="post_price">$17.99</p>
+                        </div>
+                        <div class="posters_box">
+                            <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster1-1000x1000.jpg"
+                                alt="">
+                            <div class="addcard">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+                            <div class="add_card_text">Add To Card</div>
+                            <span class="post_type">Posters</span>
+                            <h2 class="post_name">Poster V6</h2>
+                            <p class="post_price">$14.99</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer_wrapper">
+                <ul class="footer_menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <div class="footer_logo">
+                    <img src="https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/EARTH-STORE-200x35.png"
+                        alt="">
+                </div>
+                <p>Copyright © 2023 Planet Earth Store</p>
+            </div>
+        </div>
+    </footer>
     <script src="./assets/scripts/script.js"></script>
 </body>
 

@@ -4,7 +4,7 @@
 }
 .posters_box{
     position: relative;
-    max-width: 400px;
+    // max-width: 400px;
     min-width: 200px;
     width: 100%;
     img{
@@ -201,7 +201,6 @@
 
 
 @media only screen and (max-width: 800px) {
-    .wrapper{flex-direction: column;}
     .widget_box{
         flex-direction: column;
         text-align: center;
