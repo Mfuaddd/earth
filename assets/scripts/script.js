@@ -19,7 +19,7 @@ asideClose.addEventListener("click",function () {
 })
 
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-let rangeMin = 100;
+let rangeMin = 1;
 const range = document.querySelector(".range-selected");
 const rangeInput = document.querySelectorAll(".range-input input");
 const rangePrice = document.querySelectorAll(".range-price input");

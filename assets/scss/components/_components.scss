@@ -4,9 +4,10 @@
     padding: 20px;
 }
 .wrapper{
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    // align-items: center;
     gap: 20px;
 }
 .d-flex{
