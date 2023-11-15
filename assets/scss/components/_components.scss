@@ -1,0 +1,38 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.d-flex{
+    display: flex !important;
+}
+.jc-between{
+    justify-content: space-between !important;
+}
+.jc-center{
+    justify-content: center !important;
+}
+.mt-80{
+    margin-top: 80px !important;
+}
+.mb-80{
+    margin-bottom: 80px !important;
+}
+.mt-40{
+    margin-top: 40px !important;
+}
+.mb-40{
+    margin-bottom: 40px !important;
+}
+.mt-15{
+    margin-top: 15px !important;
+}
+.mb-15{
+    margin-bottom: 15px !important;
+}

@@ -11,6 +11,55 @@ img {
   max-width: 100%;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.jc-between {
+  justify-content: space-between !important;
+}
+
+.jc-center {
+  justify-content: center !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mt-40 {
+  margin-top: 40px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
 header {
   background-image: url(https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Banner.jpg);
   background-repeat: no-repeat;
@@ -19,16 +68,8 @@ header {
   overflow: auto;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 nav {
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
 }
 
 .nav_right {
@@ -249,16 +290,9 @@ nav {
   margin: 80px auto;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
 .posters_box {
   position: relative;
+  max-width: 400px;
   min-width: 200px;
   width: 100%;
 }
@@ -370,7 +404,7 @@ nav {
 }
 
 .customers_h2 {
-  padding: 20px;
+  margin-bottom: 20px;
   font-size: 40px;
   font-weight: 500;
   font-family: "Jost", sans-serif;
@@ -431,8 +465,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 10px;
+  gap: 20px;
   width: 100%;
   border-right: 1px solid #eaeaea;
 }
@@ -474,6 +507,127 @@ nav {
     border: none;
   }
 }
+.cards_right {
+  padding: 20px;
+  border-left: 1px solid #eaeaea;
+}
+.cards_right > span {
+  font-family: Roboto, "Open Sans", sans-serif;
+  display: block;
+  color: #777;
+}
+.cards_right > h2 {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  color: #74a84a;
+  font-size: 70px;
+}
+
+.right_filter > p {
+  font-family: Roboto, "Open Sans", sans-serif;
+  color: #585858;
+}
+
+.orderby {
+  font-family: Roboto, "Open Sans", sans-serif;
+  padding: 12px;
+  background-color: transparent;
+  border: transparent;
+  border-radius: 0;
+}
+
+.cards_left {
+  padding: 20px;
+}
+
+.search {
+  gap: 10px;
+}
+.search > input {
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 16px;
+}
+.search > button {
+  padding: 12px;
+  border: none;
+  outline: none;
+  background-color: #74a84a;
+  color: #FFFFFF;
+}
+.search > button > i {
+  text-align: center;
+  line-height: 24px;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.filter_slider .range-slider {
+  height: 5px;
+  position: relative;
+  background-color: #d0d0d0;
+  border-radius: 2px;
+}
+.filter_slider .range-selected {
+  height: 100%;
+  left: 30%;
+  right: 30%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #000000;
+}
+.filter_slider .range-input {
+  position: relative;
+}
+.filter_slider .range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.filter_slider .range-input input::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #74a84a;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+.filter_slider .range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #74a84a;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+.filter_slider .range-price {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter_slider .range-price label {
+  margin-right: 5px;
+}
+.filter_slider .range-price input {
+  width: 40px;
+  padding: 5px;
+}
+.filter_slider .range-price input:first-of-type {
+  margin-right: 15px;
+}
+
 footer {
   padding: 20px 0;
   border-top: 1px solid #DDDDDD;
